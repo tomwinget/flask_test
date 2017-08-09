@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Python Flask Test App</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Python Flask App</h3>
+        </div>
+ 
+        <div class="jumbotron">
+            <h1>IP List</h1>
+            <p class="lead"></p>
+            <table border = 1>
+            	{% for dict in data %}
+         
+            	<tr>
+			{% for key, value in dict.iteritems() %}
+                	<td> {{ value }} </td>
+			{% endfor %}
+            	</tr>
+            
+         	{% endfor %}
+      	    </table>	
+        </div>
+ 
+        <footer class="footer">
+            <p>&copy; Cisco 2017</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
